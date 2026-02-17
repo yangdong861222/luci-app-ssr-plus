@@ -71,7 +71,7 @@ function act_ping()
             "curl --http1.1 -m 2 -ksN -o /dev/null " ..
             "-w 'time_connect=%{time_connect}\nhttp_code=%{http_code}' " ..
             "-H 'Connection: Upgrade' -H 'Upgrade: websocket' " ..
-            "-H 'Sec-WebSocket-Key: SGVsbG8sIHdvcmxkIQ==' " ..
+            "-H 'Sec-WebSocket-Key: MTIzSGVsbG8sIHdvcmxkIQ==' " ..
             "-H 'Sec-WebSocket-Version: 13' " .. address
         )
         e.socket = string.match(result,"http_code=(%d+)") == "101"
